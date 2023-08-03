@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery orgChart Plugin Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="jquery.orgchart.css" media="all" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+    <div id="orgChartContainer">
+        <div id="orgChart"></div>
+    </div>
+    <div id="consoleOutput">
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jquery.orgchart.js"></script>
+    <script type="text/javascript">
+        var testData = [
+            { id: 1, name: 'Md. Shafiqul Islam (Special Advisor)', src: 'images/dummy-profile-pic.jpg', parent: 0 },
+            { id: 2, name: 'Md. Ali (Administration and Finance Officer)', src: 'images/dummy-profile-pic.jpg', parent: 1 },
+            { id: 3, name: 'Md. Salah Uddin Kader (Verification Officer)', src: 'images/dummy-profile-pic.jpg', parent: 1 },
+            { id: 4, name: 'Faruque Hasan (MIS Officer)', src: 'images/dummy-profile-pic.jpg', parent: 2 },
+            { id: 5, name: 'Md. Shafiqul Islam (Special Advisor)', src: 'images/dummy-profile-pic.jpg', parent: 2 },
+            { id: 6, name: 'Sujana Tabassum (Coordinator)', src: 'images/dummy-profile-pic.jpg', parent: 3 },
+            { id: 7, name: 'Md. Shafiqul Islam (Special Advisor)', src: 'images/dummy-profile-pic.jpg', parent: 3 },
+            { id: 8, name: 'Md. Shafiqul Islam (Special Advisor)', src: 'images/dummy-profile-pic.jpg', parent: 1 },
+
+        ];
+        $(function () {
+            org_chart = $('#orgChart').orgChart({
+                data: testData,
+                showControls: true,
+                allowEdit: true,
+            });
+        });
+    </script>
+</body>
+
+</html>
